@@ -39,10 +39,9 @@ const Cart = () => {
             (product) => product._id === item._id,
           );
 
-          // ✅ CHANGE 1: prevent crash if product not found
           if (!productData) return null;
 
-          // ✅ CHANGE 2: check if product has sizes
+          
           const hasSize = productData?.sizes?.length > 0;
 
           return (
